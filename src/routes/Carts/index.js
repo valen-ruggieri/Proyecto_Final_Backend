@@ -1,12 +1,17 @@
 const router = require("express").Router();
 const {
-  deleteCarts,
   getCarts,
   postCarts,
-  putCarts,
+  addProductInCart,
+  deleteAllProducts,
+  deleteProductInCart,
+  deleteCarts,
 } = require("../../controllers/Carts");
-router.get("/", getCarts);
+
+router.get("/:id", getCarts);
 router.post("/", postCarts);
-router.put("/", putCarts);
-router.delete("/", deleteCarts);
+router.post("/product/add", addProductInCart);
+router.delete("/:id", deleteCarts);
+router.delete("/deleteAll", deleteAllProducts);
+router.delete("/product/delete", deleteProductInCart);
 module.exports = router;
