@@ -18,7 +18,8 @@ const getProductById = async (req, res) => {
   });
 };
 const postProducts = async (req, res) => {
-  const { titulo, descripcion, timestamp, precio, img, codigo } = req.body;
+  const { titulo, descripcion, precio, img, codigo } = req.body;
+  const timestamp = new Date();
   const products = await Product.create({
     titulo,
     descripcion,

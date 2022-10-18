@@ -1,12 +1,14 @@
 const router = require("express").Router();
 const {
   deleteChats,
-  getChats,
   postChats,
-  putChats,
+  deleteMessages,
+  addMessage,
+  getChatsById,
 } = require("../../controllers/Chats");
-router.get("/", getChats);
+router.get("/:id", getChatsById);
 router.post("/", postChats);
-router.put("/", putChats);
-router.delete("/", deleteChats);
+router.post("/messages/add", addMessage);
+router.delete("/messages/delete", deleteMessages);
+router.delete("/:id", deleteChats);
 module.exports = router;
