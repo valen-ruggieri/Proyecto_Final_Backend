@@ -6,8 +6,9 @@ const {
   putProducts,
   getProductById,
 } = require("../../controllers/Products");
+const authPermissions = require("../../utils/middlewares/authPermissions");
 const productValidation = require("../../utils/middlewares/productValidation");
-router.get("/", getProducts);
+router.get("/", authPermissions, getProducts);
 router.get("/:id", getProductById);
 router.post("/", productValidation, postProducts);
 router.put("/:id", productValidation, putProducts);
