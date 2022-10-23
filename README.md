@@ -2,6 +2,7 @@
 
 ## Deploy
 
+https://tech-commerce.herokuapp.com/
 
 ## Demo
 
