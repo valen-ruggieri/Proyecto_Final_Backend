@@ -1,4 +1,7 @@
-# Proyecto_Final_Backend
+
+<h1 align="center">  Techcommerce API</h1>
+
+![Purple Blue Colorful Gaming LinkedIn Banner](https://user-images.githubusercontent.com/93409437/197376008-371a2c23-167e-47dc-abbe-f21de747581b.png)
 
 ## Deploy
 
@@ -31,8 +34,11 @@ middlewares de autenticacion, autorizacion y validaciones, registros, tokens y m
 
 ## Tienda
 Dentro de la tienda tendremos las opciones:
-- Como administrador de agregar, eliminar o editar productos
-- Como cliente de agregar productos al carrito, eliminarlos y finalizar la compra
+- Agregar, eliminar o editar productos.
+- Agregar productos al carrito y eliminarlos del mismo.
+- Generar un chat y enviar mensajes dentro del mismo.
+- Crear ordenes junto con alertas via mail para concluir con las compras.
+- Poder consultar sobre mis mensajes del chat como tambien mis ordenes generadas.
 
 
 ## Validaciones
@@ -53,3 +59,6 @@ para que de esta forma cumplan con ciertos formatos y estructuras.
 - Heroku
 - Nodemailer
 - Json Web Token
+  
+  
+ 
