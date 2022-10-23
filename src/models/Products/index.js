@@ -3,6 +3,7 @@ const { Schema } = mongoose;
 const schemaProducts = new Schema({
   titulo: { type: String, required: true },
   descripcion: { type: String, required: true },
+  categoria: { type: String, required: true },
   timestamp: { type: String, required: true },
   precio: { type: Number, required: true },
   img: { type: String, required: true },

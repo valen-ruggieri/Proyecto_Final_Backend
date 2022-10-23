@@ -23,25 +23,24 @@ const sendMailWelcome = async (name, email, phone) => {
   await transporter.sendMail(mailOptions);
 };
 
-const sendMailTicket = async (querysnapshot, precioTotal, email, user) => {
-  const listEmail = querysnapshot.map(
+const sendMailTicket = async (email, date, precioTotal, products) => {
+  const listEmail = products.map(
     (e, index) =>
       `<div>
             <h3>Producto ${index + 1} </h3>
             <h4> titulo: ${e.titulo}</h4>
             <h4> precio: $${e.precio} </h4>
-            <h4>cantidad: ${e.cant} </h4>
+            <h4>categoria: ${e.categoria} </h4>
             <h4>codigo: ${e.codigo}</h4>
-            <h4>subtotal: $${e.precio * e.cant}</h4>
             </div>`
   );
   const mailOptions = {
     from: "ShopBasic <valeru.251@gmail.com>",
     to: email,
-    subject: `Nuevo pedido de ${user}`,
+    subject: `Nuevo pedido de ${email}`,
     html: `<h1>Gracias por comprar en shopBasic!! 🤝</h1>
            <h2>Datos de registro</h2>
-           <h4>Nombre: ${user}</h4>
+           <h4>fecha: ${date}</h4>
            <h4>Email: ${email}</h4>
            <h2>Lista de productos</h2>
            ${listEmail.join("")}

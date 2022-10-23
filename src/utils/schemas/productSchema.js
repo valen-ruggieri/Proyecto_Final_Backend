@@ -8,7 +8,7 @@ const productSchema = yup.object({
     .matches(/^[aA-zZ\s]+$/, "El titulo solo debe contener letras "),
   precio: yup
     .string("Debe ser de tipo string")
-    .max(3, "El precio debe tener menos de 3 caracteres")
+    .max(5, "El precio debe tener menos de 5 caracteres")
     .required("El precio es requerido"),
   descripcion: yup
     .string("Debe ser de tipo string")
